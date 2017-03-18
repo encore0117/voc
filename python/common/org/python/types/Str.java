@@ -522,8 +522,7 @@ public class Str extends org.python.types.Object {
             java.util.Scanner scan = new java.util.Scanner(System.in);
             try {
                 scan = new java.util.Scanner(f);
-            }
-            catch (java.io.FileNotFoundException ex) {
+            } catch (java.io.FileNotFoundException ex) {
                 System.out.println(ex);
             }
             java.util.Map<Character, String> casefoldMap = new java.util.HashMap<Character, String>();
@@ -546,14 +545,12 @@ public class Str extends org.python.types.Object {
             for (int i = 0; i < this.value.length(); i++) {
                 if (casefoldMap.containsKey(this.value.charAt(i))) {
                     ret += casefoldMap.get(this.value.charAt(i));
-                }
-                else {
+                } else {
                     ret += this.value.charAt(i);
                 }
             }
             return new org.python.types.Str(ret.toLowerCase());
-        }
-        else {
+        } else {
             throw new org.python.exceptions.NotImplementedError("casefold() has not been implemented.");
         }
     }
