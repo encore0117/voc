@@ -351,7 +351,15 @@ class StrTests(TranspileTestCase):
 
     def test_casefold(self):
         self.assertCodeExecution("""
-            s = 'ßᾲᾳᾴᾶᾷᾼῂῃῄῆῇῌῒΐῖῗῢΰῤῦῧῲῳῴῶῷῼﬀﬁﬂﬃﬄﬅﬆﬓﬔﬕ'
+            s = 'İ'
+            print(s.casefold())
+            s = 'I'
+            print(s.casefold())
+            s = 'ß'
+            print(s.casefold())
+            s = 'Ŋ'
+            print(s.casefold())
+            s = 'ı'
             print(s.casefold())
         """)
 
